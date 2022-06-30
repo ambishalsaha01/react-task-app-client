@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import ToDoData from './ToDoData';
 
 const Todo = () => {
+    const [tasks, setTasks] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5000/task')
+        .then(res=> res.json())
+        .then(data=> setTasks(data))
+    },[])
     return (
-        <div>
-            <h2>todo</h2>
+        <div className='mt-5'>
+            <h2 className='mb-3'>ToDo Task LiSt</h2>
+            {
+                tasks.map(task => <ToDoData
+                    key={task._id}
+                    task={task}
+                ></ToDoData>)
+            }
         </div>
     );
 };
