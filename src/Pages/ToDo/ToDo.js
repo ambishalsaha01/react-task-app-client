@@ -10,7 +10,6 @@ const Todo = () => {
     },[])
     return (
         <div className='mt-5'>
-            <h2 className='mb-3'>ToDo Task LiSt</h2>
             {
                 tasks.map(task => <ToDoData
                     key={task._id}

@@ -1,7 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Pages/Shared/Header';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import Calender from './Pages/Calender/Calender';
 import CompletedTasks from './Pages/CompletedTasks/CompletedTasks';
