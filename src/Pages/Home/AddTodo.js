@@ -8,7 +8,7 @@ const AddTodo = () => {
         const task = {name}
         console.log(task)
         // send to the server
-        fetch('http://localhost:5000/task', {
+        fetch('https://cryptic-crag-92201.herokuapp.com/task', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
